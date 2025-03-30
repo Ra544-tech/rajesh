@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugadi</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <div class="container">
+         
+        <div class="ugadi-paragraph">
+            <p>"శుభకృత్ నామ సంవత్సర ఉగాది శుభాకాంక్షలు,<span class="whishes"><i>Name</i></span><br>
+                ఈ ఉగాది నూతన ఉత్సాహంతో, ఆనందంతో, ఆరోగ్యంతో నిండి ఉండాలి. <br>
+                నీ జీవితంలో సిరిసంపదలు, శాంతి, విజయాలు వెల్లివిరియాలి!"</p> 
+        </div>     
+        <div class="input-box">
+            <div class="ugadi-invitation">
+                 <h2>Ugadi Whishes</h2>
+                <input type="text" placeholder="Enter you name" class="ugadi" required><br>
+                <button class="enter">Enter</button>
+            </div>
+        </div>  
+    </div>
+    <script>
+     let input = document.querySelector('.ugadi');
+let btn = document.querySelector('.enter');
+let span = document.querySelector('.whishes');
+let ugadiWhishes = document.querySelector('.ugadi-paragraph');
+let inputBox = document.querySelector('.input-box');
+
+btn.addEventListener('click', () => {
+    let name = input.value.trim();
+    if (name !== "") {
+        span.textContent = name; 
+        ugadiWhishes.style.display = "flex";
+        inputBox.style.display = "none"; 
+    } else {
+        alert("Please enter your name!");
+    }
+});
+
+        
+    </script>
+</body>
+</html>
